@@ -1,18 +1,27 @@
 // pages/home/home.js
-Page({
 
+import { Http } from "../../utils/http.js";
+import { config  } from "../config/config.js";
+import { Theme } from "../model/theme.js";
+
+Page({
+  
   /**
    * Page initial data
    */
   data: {
-
+    topTheme: null
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    Theme.getHomeLocationA(data => {
+      this.setData({
+        topTheme: data[0]
+      })
+    })
   },
 
   /**
