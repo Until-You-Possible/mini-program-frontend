@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/home/home",
-    "components/catagory-grid/index"
+    "components/category-grid/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,5 +10,9 @@
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "l-grid": "./miniprogram_npm/lin-ui/grid/index",
+    "l-grid-item": "/miniprogram_npm/lin-ui/grid-item/index"
+  }
 }

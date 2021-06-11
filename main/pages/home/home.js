@@ -3,6 +3,7 @@
 
 import { Theme } from "../model/theme.js";
 import { Banner } from "../model/banner.js";
+import { Category } from "../model/category.js";
 
 Page({
   
@@ -11,7 +12,8 @@ Page({
    */
   data: {
     themeA  : null,
-    bannerB : null
+    bannerB : null,
+    grid    : []
   },
 
   /**
@@ -23,10 +25,11 @@ Page({
   async initAllData() {
     const themeA  = await Theme.getHomeLocationA();
     const banenrB = await Banner.getHomeLocationB();
-    console.log("banenrB", banenrB);
+    const grid    = await Category.getGridCategory();
     this.setData({
       themeA  : themeA[0],
-      bannerB : banenrB
+      bannerB : banenrB,
+      grid    : grid.roots.slice(0, 5)
     })
   }
 })

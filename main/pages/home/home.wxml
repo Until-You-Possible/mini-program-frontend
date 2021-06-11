@@ -13,4 +13,7 @@
       </swiper-item>
   </swiper>
 
+  <s-category-grid grid="{{grid}}">
+  </s-category-grid>
+
 </view>
