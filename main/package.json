@@ -1,0 +1,14 @@
+{
+  "name": "sleeve",
+  "version": "0.1.0",
+  "description": "电商小程序(javascript-version)",
+  "main": "app.js",
+  "dependencies": {
+    "lin-ui": "~0.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "arthur",
+  "license": "ISC"
+}

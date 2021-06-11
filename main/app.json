@@ -1,11 +1,12 @@
 {
   "pages": [
-    "pages/home/home"
+    "pages/home/home",
+    "components/catagory-grid/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "电商小程序",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
