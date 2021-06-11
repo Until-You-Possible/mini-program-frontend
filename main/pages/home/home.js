@@ -2,6 +2,7 @@
 
 
 import { Theme } from "../model/theme.js";
+import { Banner } from "../model/banner.js";
 
 Page({
   
@@ -9,17 +10,23 @@ Page({
    * Page initial data
    */
   data: {
-    topTheme: null
+    themeA  : null,
+    bannerB : null
   },
 
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: async function (options) {
-    const data = await Theme.getHomeLocationA();
-    console.log("data", data);
+  async onLoad(options) {
+    this.initAllData();
+  },
+  async initAllData() {
+    const themeA  = await Theme.getHomeLocationA();
+    const banenrB = await Banner.getHomeLocationB();
+    console.log("banenrB", banenrB);
     this.setData({
-      topTheme: data[0]
+      themeA  : themeA[0],
+      bannerB : banenrB
     })
   }
 })
