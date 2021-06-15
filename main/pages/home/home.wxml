@@ -16,4 +16,6 @@
   <s-category-grid grid="{{grid}}">
   </s-category-grid>
 
+  <image class="activity-img" src="{{activity.entrance_img}}"></image>
+
 </view>

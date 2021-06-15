@@ -1,5 +1,9 @@
 /* pages/home/home.wxss */
 
+.container {
+    background-color: #000000;
+}
+
 .top-theme {
     width: 100%;
     height: 260rpx;
@@ -9,4 +13,9 @@
 .swiper {
     height: 360rpx;
     width: 100%;
+}
+.activity-img {
+    width: 100%;
+    margin-top: 20rpx;
+    height: 310rpx;
 }
