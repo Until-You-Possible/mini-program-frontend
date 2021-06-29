@@ -20,7 +20,7 @@
 
   <s-spu-scroll 
       wx:if="true" 
-      theme="{{themeE}}"
+      theme="{{themesE}}"
       spu-list="{{themesSpu}}"
   ></s-spu-scroll>
 

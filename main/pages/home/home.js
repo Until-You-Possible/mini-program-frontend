@@ -41,11 +41,11 @@ Page({
         themeSpu = data.spu_list.slice(0, 8);
       }
     }
-    console.log("themesE", themesE);
+    console.log("themesE", themesE[0]);
     this.setData({
       themeA   : themesA[0],
       bannerB  : banenrB,
-      themesE  : themesE,
+      themesE  : themesE[0],
       themesSpu: themeSpu,
       grid     : grid.roots.slice(0, 5),
       activity : activity
