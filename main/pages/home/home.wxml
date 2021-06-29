@@ -18,4 +18,10 @@
 
   <image class="activity-img" src="{{activity.entrance_img}}"></image>
 
+  <s-spu-scroll 
+      wx:if="true" 
+      theme="{{themeE}}"
+      spu-list="{{themesSpu}}"
+  ></s-spu-scroll>
+
 </view>
