@@ -3,6 +3,7 @@ Component({
   /**
    * Component properties
    */
+  externalClasses: ["l-class"],
   properties: {
     theme: Object,
     spuList : Array,

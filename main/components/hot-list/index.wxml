@@ -1,0 +1,18 @@
+<!--components/hot-list/index.wxml-->
+
+<view class="container">
+    <image data-tname="t-5" bind:tap="onGotToTheme" class="title" src="{{banner.img}}"></image>
+    <view class="inner-container">
+        <view hover-class="rect-hover" hover-stay-time="300">
+            <image data-keyword="{{left.keyword}}" data-type="{{left.type}}"  bind:tap="onGotoDetail" class="left" src="{{left.img}}"></image>
+        </view>
+        <view class="right-container">
+            <image data-keyword="{{rightTop.keyword}}"
+                       data-type="{{rightTop.type}}"
+                       bind:tap="onGotoDetail" class="right-size" src="{{rightTop.img}}"></image>
+            <image data-keyword="{{rightBottom.keyword}}"
+                       data-type="{{rightBottom.type}}"
+                       bind:tap="onGotoDetail" class="right-size" src="{{rightBottom.img}}"></image>
+        </view>
+    </view>
+</view>

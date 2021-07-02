@@ -13,8 +13,7 @@
       </swiper-item>
   </swiper>
 
-  <s-category-grid grid="{{grid}}">
-  </s-category-grid>
+  <s-category-grid grid="{{grid}}"> </s-category-grid>
 
   <image class="activity-img" src="{{activity.entrance_img}}"></image>
 
@@ -23,5 +22,12 @@
       theme="{{themesE}}"
       spu-list="{{themesSpu}}"
   ></s-spu-scroll>
+
+  <image class="quality" src="{{themesF.internal_top_img}}"></image>
+
+  <s-hot-list banner="{{bannerG}}"></s-hot-list>
+
+  <image src="{{themes.internal_top_img}}"></image>
+
 
 </view>

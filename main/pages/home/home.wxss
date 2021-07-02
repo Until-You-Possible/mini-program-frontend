@@ -19,3 +19,10 @@
     margin-top: 20rpx;
     height: 310rpx;
 }
+
+.quality {
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    width: 100%;
+    display: flex;
+}

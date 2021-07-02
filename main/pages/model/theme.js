@@ -19,19 +19,19 @@ export class Theme {
       }
     });
   }
-  async getHomeLocationA () {
+  getHomeLocationA () {
     return this.Themes.filter( t => t.name === Theme.locationA);
   }
   getHomeLocationE() {
-    return this.Themes.filter(t => t.name === Theme.locationE)
+    return this.Themes.filter(t => t.name === Theme.locationE);
   }
 
   getHomeLocationF() {
-    return this.Themes.filter(t => t.name === Theme.locationF)
+    return this.Themes.filter(t => t.name === Theme.locationF);
   }
 
   getHomeLocationH() {
-    return this.Themes.filter(t => t.name === Theme.locationH)
+    return this.Themes.filter(t => t.name === Theme.locationH);
   }
   static getHomeLocationESpu() {
     return Theme.getThemeSpuByName(Theme.locationE);

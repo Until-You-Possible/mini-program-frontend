@@ -17,6 +17,9 @@ Page({
     themesSpu : null,
     activity  : null,
     themesE   : null,
+    themesF   : null,
+    bannerG   : null,
+    themesH   : null,
     grid    : []
   },
 
@@ -29,8 +32,11 @@ Page({
   async initAllData() {
     const theme = new Theme();
     await theme.getThemes();
-    const themesA       = await theme.getHomeLocationA();
-    const themesE       = await theme.getHomeLocationE();
+    const themesA       = theme.getHomeLocationA();
+    const themesE       = theme.getHomeLocationE();
+    const themesF       = theme.getHomeLocationF();
+    const bannerG       = await Banner.getHomeLocationG();
+    const themesH       = theme.getHomeLocationH();
     const banenrB       = await Banner.getHomeLocationB();
     const grid          = await Category.getGridCategoryC();
     const activity      = await Activity.getHomeLocationD();
@@ -41,14 +47,17 @@ Page({
         themeSpu = data.spu_list.slice(0, 8);
       }
     }
-    console.log("themesE", themesE[0]);
+    console.log("bannerG", bannerG);
     this.setData({
       themeA   : themesA[0],
       bannerB  : banenrB,
       themesE  : themesE[0],
       themesSpu: themeSpu,
       grid     : grid.roots.slice(0, 5),
-      activity : activity
+      activity : activity,
+      themesF  : themesF[0],
+      bannerG,
+      themesH
     })
   }
 })
