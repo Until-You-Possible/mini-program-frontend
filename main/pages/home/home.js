@@ -5,6 +5,7 @@ import { Theme }      from "../model/theme.js";
 import { Banner }     from "../model/banner.js";
 import { Category }   from "../model/category.js";
 import { Activity }   from "../model/activity.js";
+import { SpuPaging } from "../model/spu-paging.js";
 
 Page({
   
@@ -47,7 +48,6 @@ Page({
         themeSpu = data.spu_list.slice(0, 8);
       }
     }
-    console.log("bannerG", bannerG);
     this.setData({
       themeA   : themesA[0],
       bannerB  : banenrB,
@@ -57,7 +57,17 @@ Page({
       activity : activity,
       themesF  : themesF[0],
       bannerG,
-      themesH
-    })
+      themesH  : themesH[0]
+    });
+
+    this.initBottomSpuList();
+  },
+  async initBottomSpuList () {
+    const paging = SpuPaging.getLatestPaging();
+    const data   = await paging.getMoreData();
+    if (!data) {
+      return
+    }
+    wx.lin.renderWaterFlow(data.items);
   }
 })

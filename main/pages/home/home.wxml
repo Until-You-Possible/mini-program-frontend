@@ -27,7 +27,12 @@
 
   <s-hot-list banner="{{bannerG}}"></s-hot-list>
 
-  <image src="{{themes.internal_top_img}}"></image>
+  <image data-tname="t-4" bind:tap="onGoToTheme" src="{{themesH.internal_top_img}}" class="fashion"></image>
 
+
+   <view class="spu-bottom">
+            <image class="title-spu-bottom" src="/imgs/home/title@interest.png"></image>
+            <l-water-flow generic:l-water-flow-item="s-spu-preview"></l-water-flow>
+    </view>
 
 </view>

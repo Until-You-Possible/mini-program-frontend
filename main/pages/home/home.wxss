@@ -26,3 +26,25 @@
     width: 100%;
     display: flex;
 }
+
+.fashion{
+    display: flex;
+    width: 100%;
+    height: 840rpx;
+    margin-top: 20rpx;
+}
+
+.spu-bottom{
+    margin-top:20rpx;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding-top:30rpx;
+    background-color: #ffffff;
+}
+
+.title-spu-bottom{
+    width: 690rpx;
+    height: 70rpx;
+    margin-bottom: 38rpx;
+}
