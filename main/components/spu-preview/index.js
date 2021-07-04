@@ -1,23 +1,44 @@
 // components/spu-preivew/index.js
+
 Component({
-  /**
-   * Component properties
-   */
   properties: {
-    data: Object
+      data: Object
   },
 
-  /**
-   * Component initial data
-   */
   data: {
-
+      tags: Array
   },
 
-  /**
-   * Component methods
-   */
-  methods: {
+  observers: {
+      data: function (data) {
+  
+          if (!data) {
+              return
+          }
+          if (!data.tags) {
+              return
+          }
+          const tags = data.tags.split('$')
+          console.log(tags)
+          this.setData({
+              tags
+          })
+      }
+  },
 
+  methods: {
+      onImgLoad(event) {
+          const {width, height} = event.detail
+          this.setData({
+              w:340,
+              h:340*height/width
+          })
+      },
+      onItemTap(event){
+          const pid = event.currentTarget.dataset.pid
+          wx.navigateTo({
+              url:`/pages/detail/detail?pid=${pid}`
+          })
+      }
   }
 })
