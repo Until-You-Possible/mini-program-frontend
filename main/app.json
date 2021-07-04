@@ -6,8 +6,9 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "电商小程序",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "小程序",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",

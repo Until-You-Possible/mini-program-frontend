@@ -1,5 +1,5 @@
 
-<l-loadmore show>
+<l-loadmore show  loadingType="{{loadingType}}">
 
     <view slot="content">
   <image class="top-theme" src="{{themeA.internal_top_img}}"></image>
