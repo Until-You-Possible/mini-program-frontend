@@ -10,7 +10,7 @@ export class Paging {
   moreData = true;
   accumulator = [];
 
-  constructor(req, start = 0, count = 10) {
+  constructor(req, start = 0, count = 3) {
     this.req   = req;
     this.start = start;
     this.count = count;
@@ -24,7 +24,6 @@ export class Paging {
       return;
     }
     const data = await this.actualGetData();
-    console.log("data",data);
     this.releaseLocker();
     return data;
   }

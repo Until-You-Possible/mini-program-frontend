@@ -1,6 +1,6 @@
 
 import { config } from "../pages/config/config";
-import {promisic} from "./utils";
+import { promisic } from "./utils";
 
 class Http {
   static async request(dataObject) {

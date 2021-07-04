@@ -21,7 +21,8 @@ Page({
     themesF   : null,
     bannerG   : null,
     themesH   : null,
-    grid    : []
+    grid      : [],
+    SpuPaging : null
   },
 
   /**
@@ -56,7 +57,7 @@ Page({
       grid     : grid.roots.slice(0, 5),
       activity : activity,
       themesF  : themesF[0],
-      bannerG,
+      bannerG  : bannerG,
       themesH  : themesH[0]
     });
 
@@ -64,10 +65,15 @@ Page({
   },
   async initBottomSpuList () {
     const paging = SpuPaging.getLatestPaging();
+    this.data.SpuPaging = paging;
     const data   = await paging.getMoreData();
     if (!data) {
       return
     }
+    wx.lin.renderWaterFlow(data.items);
+  },
+  async onReachBottom() {
+    const data = await this.data.SpuPaging.getMoreData();
     wx.lin.renderWaterFlow(data.items);
   }
 })

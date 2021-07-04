@@ -1,4 +1,7 @@
-<view>
+
+<l-loadmore show>
+
+    <view slot="content">
   <image class="top-theme" src="{{themeA.internal_top_img}}"></image>
   <swiper 
      class="swiper"
@@ -35,4 +38,7 @@
             <l-water-flow generic:l-water-flow-item="s-spu-preview"></l-water-flow>
     </view>
 
+
 </view>
+
+</l-loadmore>

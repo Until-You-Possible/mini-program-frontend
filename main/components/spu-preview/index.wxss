@@ -47,6 +47,7 @@
   flex-direction: row;
 }
 
+
 .discount-price {
   margin-left: 20rpx;
 }

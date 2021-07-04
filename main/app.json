@@ -15,6 +15,22 @@
     "l-grid": "./miniprogram_npm/lin-ui/grid/index",
     "l-grid-item": "/miniprogram_npm/lin-ui/grid-item/index",
     "l-price": "/miniprogram_npm/lin-ui/price/index",
-    "s-spu-preview": "/components/spu-preview/index"
+    "s-spu-preview": "/components/spu-preview/index",
+    "l-counter": "/miniprogram_npm/lin-ui/counter/index",
+    "l-button": "/miniprogram_npm/lin-ui/button/index",
+    "l-badge": "/miniprogram_npm/lin-ui/badge/index",
+    "l-loading": "/miniprogram_npm/lin-ui/loading/index",
+    "l-popup": "/miniprogram_npm/lin-ui/popup/index",
+    "l-segment": "/miniprogram_npm/lin-ui/segment/index",
+    "l-segment-item": "/miniprogram_npm/lin-ui/segment-item/index",
+    "l-slide-view": "/miniprogram_npm/lin-ui/slide-view/index",
+    "l-icon": "/miniprogram_npm/lin-ui/icon/index",
+    "l-search-bar": "/miniprogram_npm/lin-ui/search-bar/index",
+    "l-status-show": "/miniprogram_npm/lin-ui/status-show/index",
+    "l-tag": "/miniprogram_npm/lin-ui/tag/index",
+    "l-loadmore": "/miniprogram_npm/lin-ui/loadmore/index",
+    "l-avatar": "/miniprogram_npm/lin-ui/avatar/index",
+    "l-dialog": "/miniprogram_npm/lin-ui/dialog/index",
+    "l-list": "/miniprogram_npm/lin-ui/list/index"
   }
 }
