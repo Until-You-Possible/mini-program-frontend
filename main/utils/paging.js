@@ -32,7 +32,7 @@ export class Paging {
     const req  = this.getCurrentReq();
     let paging = await Http.request(req);
     if (!paging) {
-      return;
+      return null;
     }
     if (paging.total === 0) {
       return {

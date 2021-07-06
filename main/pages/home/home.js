@@ -23,7 +23,7 @@ Page({
     themesH   : null,
     grid      : [],
     SpuPaging : null,
-    loadingType : "loading"
+    loadingType : "end"
   },
 
   /**
@@ -77,11 +77,10 @@ Page({
     const data = await this.data.SpuPaging.getMoreData();
     if (data) {
       wx.lin.renderWaterFlow(data.items);
-      if (!data.moreData) {
+    } else {
         this.setData({
           loadingType: "end"
-        })
-      }
+        });
     }
 
   }
