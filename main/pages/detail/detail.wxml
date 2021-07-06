@@ -1,2 +1,7 @@
 <!--pages/home/detail/detail.wxml-->
-<text>pages/home/detail/detail.wxml</text>
+
+<view class="container">
+
+<s-realm spu="{{spu}}"></s-realm>
+
+</view>

@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "s-relam": "/components/realm/index"
+    "s-fence": "/components/fence/index"
   }
 }

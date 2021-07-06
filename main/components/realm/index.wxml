@@ -1,0 +1,13 @@
+<!--components/realm/index.wxml-->
+
+<view class="container">
+
+   <block wx:for="{{}}">
+       <s-fence></s-fence>
+   </block>
+
+   <view class="counter-container">
+   <l-counter></l-counter>
+   </view>
+
+</view>
