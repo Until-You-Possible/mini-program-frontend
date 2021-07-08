@@ -13,6 +13,13 @@ Component({
   data: {
 
   },
+  observers: {
+    "spu": function (spu) {
+      if (!spu) {
+        return
+      }
+    }
+  }
 
   /**
    * Component methods
