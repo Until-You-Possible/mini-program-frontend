@@ -1,3 +1,5 @@
+import { FenceGroup } from "../model/fence-group";
+
 // components/realm/index.js
 Component({
   /**
@@ -18,8 +20,11 @@ Component({
       if (!spu) {
         return
       }
+      const fenceGroup = new FenceGroup(spu);
+      console.log("fenceGroup", fenceGroup);
+      fenceGroup.initFences();
     }
-  }
+  },
 
   /**
    * Component methods
