@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "s-relam": "/components/realm/index"
+    "s-realm": "/components/realm/index"
   }
 }
