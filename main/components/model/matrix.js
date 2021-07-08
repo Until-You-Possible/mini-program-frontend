@@ -3,6 +3,7 @@
 class Matrix {
   m;
   constructor (matrix) {
+    console.log("matrix", matrix);
     this.m = matrix;
   }
 
@@ -11,13 +12,13 @@ class Matrix {
   }
 
   get colsNum () {
-    this.m[0].length;
+    return this.m[0].length;
   }
 
   each (cb) {
     for (let j = 0; j < this.colsNum; j++) {
       for (let i = 0; i < this.rowNum; i++) {
-        const element = this.m[j][i];
+        const element = this.m[i][j];
         cb(element, i, j);
       }
     }
@@ -26,5 +27,5 @@ class Matrix {
 }
 
 export {
-  Matrixs
+  Matrix
 }
