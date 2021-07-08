@@ -16,7 +16,6 @@ class FenceGroup {
       if (currentJ !== j) {
         // 开启新的一列
         currentJ = j;
-        console.log("this._createFence", this._createFece());
         fences[currentJ] = this._createFece(element);
       }
       fences[currentJ].pushValueTitle(element.value);

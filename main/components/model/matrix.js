@@ -3,7 +3,6 @@
 class Matrix {
   m;
   constructor (matrix) {
-    console.log("matrix", matrix);
     this.m = matrix;
   }
 
