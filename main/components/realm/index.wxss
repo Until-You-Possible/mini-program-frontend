@@ -9,7 +9,7 @@
   margin-bottom: 100rpx;
 }
 
-.inner-container{
+.inner-container {
   padding: 30rpx 30rpx 0 30rpx;
 }
 
@@ -18,7 +18,7 @@
   flex-direction: row;
 }
 
-.sku-img{
+.sku-img {
   width: 160rpx;
   height: 160rpx;
 }
