@@ -22,6 +22,17 @@ class Matrix {
       }
     }
   }
+  // numpy
+  transpose () {
+    const desArr = [];
+    for (let j = 0; j < this.colsNum; j++) {
+      desArr[j] = [];
+      for (let i = 0; i < this.rowNum; i++) {
+        desArr[j][i] = this.m[i][j];
+      }
+    }
+    return desArr;
+  }
 
 }
 

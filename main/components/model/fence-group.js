@@ -4,6 +4,7 @@ import { Matrix } from "./matrix";
 
 class FenceGroup {
   spu;
+  fences = [];
   constructor (spu) {
     this.spu = spu;
     this.skuList = spu.sku_list;
@@ -20,8 +21,22 @@ class FenceGroup {
       }
       fences[currentJ].pushValueTitle(element.value);
     });
-    console.log("fences", fences);
   }
+   initFences1 () {
+    const matrix = this._createMatrix(this.skuList);
+    const fences= [];
+    const AT = matrix.transpose();
+    console.log("AT", AT);
+    AT.forEach(r => {
+      const fence = new Fence(r);
+      fence.init();
+      fences.push(fence);
+    });
+    this.fences =  fences;
+    console.log("fences", fences);
+
+   }
+  
   _createFece (element) {
     const fence = new Fence();
     return fence;

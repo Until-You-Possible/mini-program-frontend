@@ -22,7 +22,8 @@ Component({
       }
       const fenceGroup = new FenceGroup(spu);
       console.log("fenceGroup", fenceGroup);
-      fenceGroup.initFences();
+      fenceGroup.initFences1();
+      this.bindInitData(fenceGroup);
     }
   },
 
@@ -30,6 +31,10 @@ Component({
    * Component methods
    */
   methods: {
-
+    bindInitData (fenceGroup) {
+      this.setData({
+        fences: fenceGroup.fences
+      })
+    }
   }
 })
