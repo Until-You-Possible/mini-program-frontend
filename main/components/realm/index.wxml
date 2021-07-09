@@ -2,8 +2,8 @@
 
 <view class="container">
 
-   <block wx:for="{{}}">
-       <s-fence></s-fence>
+   <block wx:for="{{fences}}" wx:key="index">
+       <s-fence fence="{{item}}"></s-fence>
    </block>
 
    <view class="counter-container">

@@ -1,10 +1,10 @@
-// components/fence/index.js
+// components/cell/index.js
 Component({
   /**
    * Component properties
    */
   properties: {
-    fence: Object
+    cell: Object
   },
 
   /**

@@ -1,11 +1,31 @@
+import { Cell } from "./cell";
 
 
 class Fence {
-  valueTitle = [];
-  pushValueTitle (title) {
-    this.valueTitle.push(title);
+  cells = [];
+  specs;
+  id;
+  title;
+
+  constructor (specs) {
+    this.specs = specs;
+    this.title = specs[0].key;
+    this.id = specs[0].key_id;
+  }
+  init () {
+    this._initCells();
   }
 
+  _initCells () {
+    this.specs.forEach(s => {
+      const exsited = this.cells.some(c => c.id === s.value_id);
+      if (exsited) {
+        return;
+      }
+      const cell = new Cell(s);
+      this.cells.push(cell);
+    });
+  }
 }
 export {
   Fence
