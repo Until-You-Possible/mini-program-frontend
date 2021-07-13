@@ -17,7 +17,10 @@ export class SkuCode {
     const length = spuAndSpec.length;
     for (let i = 1; i <= length; i++) {
       const segments = combination(specCodeArray, i);
-      console.log("segments", segments);
+      const newSegments =  segments.map(s => {
+        return s.join("#");
+      });
+      this.totalSegments = this.totalSegments.concat(newSegments);
     }
 
 
