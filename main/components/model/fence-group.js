@@ -26,14 +26,12 @@ class FenceGroup {
     const matrix = this._createMatrix(this.skuList);
     const fences= [];
     const AT = matrix.transpose();
-    console.log("AT", AT);
     AT.forEach(r => {
       const fence = new Fence(r);
       fence.init();
       fences.push(fence);
     });
     this.fences =  fences;
-    console.log("fences", fences);
 
    }
   

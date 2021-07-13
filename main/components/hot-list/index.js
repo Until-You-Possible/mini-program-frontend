@@ -36,7 +36,6 @@ Component({
   methods: {
     onGotToTheme(event) {
       const tName = event.currentTarget.dataset.tname
-      console.log(tName)
       wx.navigateTo({
           url: `/pages/theme/theme?tname=${tName}`
       })
