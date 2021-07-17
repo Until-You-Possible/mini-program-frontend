@@ -39,14 +39,12 @@ class Judger  {
     for (let i = 0; i < this.fenceGroup.fences.length; i++) {
       console.log("for inner i", i);
       const selected = this.skuPending.findSelectedCellByX(i);
-      console.log("selected", this.skuPending);
       if (x === i) {
         const cellCode = this._getCellCode(cell.spec);
         joiner.join(cellCode);
       }
       if (selected) {
         const selectedCellCode = this._getCellCode(selected.spec);
-        console.log("selectedCellCode", selectedCellCode);
         joiner.join(selectedCellCode);
       }
       return joiner.getStr();

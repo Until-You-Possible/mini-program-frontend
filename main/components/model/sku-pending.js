@@ -16,7 +16,6 @@ class SkuPending {
   }
 
   findSelectedCellByX (x) {
-    console.log("this.pending", this.pending[x]);
     return this.pending[x];
   }
 
