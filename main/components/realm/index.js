@@ -41,7 +41,6 @@ Component({
     },
     onCellTap (event) {
       const cell = event.detail.cell;
-      console.log("cell", event.detail);
       const x = event.detail.x;
       const y = event.detail.y;
       const  judger = this.data.judger;
