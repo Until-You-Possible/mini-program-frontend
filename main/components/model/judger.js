@@ -1,6 +1,8 @@
+import { CellStatus } from "../../core/enum";
+import { Cell } from "./cell";
 import { SkuCode } from "./sku-code";
 
-export class Judger  {
+class Judger  {
   fenceGroup;
   pathDict = [];
 
@@ -13,7 +15,21 @@ export class Judger  {
       const skuCode = new SkuCode(s.code);
       this.pathDict = this.pathDict.concat(skuCode.totalSegments);
     });
-    console.log("pathDict", this.pathDict);
   }
+  judge (cell, x, y) { 
+    this._changeCellStatus(cell,x,y);
+  }
+  _changeCellStatus (cell,x,y) {
+    if (cell.status === CellStatus.WAITING) {
+      this.fenceGroup.fences[x].cells[y].status = CellStatus.SELECTED;
+      console.log("this.fenceGroup", this.fenceGroup.fences);
+    }
+    if (cell.status === CellStatus.SELECTED) {
+      this.fenceGroup.fences[x].cells[y].status = CellStatus.WAITING;
+    }
+  }
+}
 
+export {
+  Judger
 }

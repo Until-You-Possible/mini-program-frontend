@@ -4,7 +4,8 @@ Component({
    * Component properties
    */
   properties: {
-    fence: Object
+    fence: Object,
+    x: Number
   },
 
   /**

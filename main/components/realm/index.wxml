@@ -3,11 +3,11 @@
 <view class="container">
 
    <block wx:for="{{fences}}" wx:key="index">
-       <s-fence fence="{{item}}"></s-fence>
+       <s-fence x="{{index}}" bind:cellTap="onCellTap" fence="{{item}}"></s-fence>
    </block>
 
    <view class="counter-container">
-   <l-counter></l-counter>
+       <l-counter></l-counter>
    </view>
 
 </view>
