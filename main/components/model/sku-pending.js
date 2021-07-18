@@ -18,6 +18,14 @@ class SkuPending {
   findSelectedCellByX (x) {
     return this.pending[x];
   }
+  isSelected (cell, x, y) {
+    const pendingCell = this.pending[x];
+    if (!pendingCell) {
+      return;
+    }
+    return cell.id === pendingCell.id;
+
+  }
 
 }
 
