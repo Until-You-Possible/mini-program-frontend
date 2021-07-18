@@ -47,8 +47,6 @@ class Judger  {
       if (!path) {
         return;
       }
-      console.log("this.pathDict", this.pathDict);
-      console.log("path", path);
       const isIn = this._isInDict(path);
       if (isIn) {
         if (cell.status === CellStatus.SELECTED) {
