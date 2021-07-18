@@ -1,11 +1,11 @@
 <!--components/realm/index.wxml-->
-
+<wxs src="../../wxs/price.wxs" module="p"></wxs>
 <view class="container">
    <view class="inner-container">
     <view class="sku-preview">
-    <image class="sku-img"></image>
+    <image class="sku-img" src="{{previewImg}}"></image>
     <view class="sku-description">
-        <view class="title">title</view>
+        <view class="title">{{title}}</view>
         <view>
             <view class="price-row">
                 <l-price
