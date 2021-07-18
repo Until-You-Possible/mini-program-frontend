@@ -13,6 +13,8 @@ class Judger  {
     this.initPathDict();
     this._initPending();
   }
+
+
   initPathDict () {
     this.fenceGroup.spu.sku_list.forEach(s => {
       const skuCode = new SkuCode(s.code);
@@ -22,10 +24,21 @@ class Judger  {
 
   _initPending () {
     this.skuPending  = new SkuPending();
+    const defaultSku = this.fenceGroup.getDefaultSku();
+    if (!defaultSku) {
+      return;
+    }
+    this.skuPending.init(defaultSku);
+    this.skuPending.pending.forEach( cell => {
+      this.fenceGroup.setCellStatusById(cell.id, CellStatus.SELECTED);
+    })
+    this.judge(null,null,null, true);
   }
 
-  judge (cell, x, y) { 
-    this._changeCurrentCellStatus(cell, x, y);
+  judge (cell, x, y, isInit = false) { 
+    if (!isInit) {
+      this._changeCurrentCellStatus(cell, x, y);
+    }
     this.fenceGroup.eachCell((cell, x, y) => {
       const path = this._findPotenialPath(cell, x, y);
       if (!path) {
@@ -38,9 +51,9 @@ class Judger  {
         if (cell.status === CellStatus.SELECTED) {
           return;
         }
-        this.fenceGroup.fences[x].cells[y].status = CellStatus.WAITING;
+        this.fenceGroup.setCellStatusByXY(x, y, CellStatus.WAITING);
       } else {
-        this.fenceGroup.fences[x].cells[y].status = CellStatus.FORBIDDEN;
+        this.fenceGroup.setCellStatusByXY(x, y, CellStatus.FORBIDDEN);
       }
     });
   }
@@ -73,11 +86,11 @@ class Judger  {
 
   _changeCurrentCellStatus (cell,x,y) {
     if (cell.status === CellStatus.WAITING) {
-      this.fenceGroup.fences[x].cells[y].status = CellStatus.SELECTED;
+      this.fenceGroup.setCellStatusByXY(x, y, CellStatus.SELECTED);
       this.skuPending.insertCell(cell, x);
     }
     if (cell.status === CellStatus.SELECTED) {
-      this.fenceGroup.fences[x].cells[y].status = CellStatus.WAITING;
+      this.fenceGroup.setCellStatusByXY(x, y, CellStatus.WAITING);
       this.skuPending.removeCell(x);
 
     }
