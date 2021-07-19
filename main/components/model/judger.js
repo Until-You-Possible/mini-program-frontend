@@ -23,7 +23,8 @@ class Judger  {
   }
 
   _initPending () {
-    this.skuPending  = new SkuPending();
+    const pendingSize = this.fenceGroup.fences.length;
+    this.skuPending  = new SkuPending(pendingSize);
     const defaultSku = this.fenceGroup.getDefaultSku();
     if (!defaultSku) {
       return;
@@ -36,6 +37,10 @@ class Judger  {
     this.skuPending.pending.forEach( cell => {
       this.fenceGroup.setCellStatusById(cell.id, CellStatus.SELECTED);
     })
+  }
+
+  isSkuIntact () {
+    return this.skuPending.isIntact();
   }
 
   judge (cell, x, y, isInit = false) { 

@@ -72,8 +72,10 @@ Component({
     },
     bindInitData (fenceGroup) {
       this.setData({
-        fences: fenceGroup.fences
-      })
+        fences: fenceGroup.fences,
+        skuIntact: this.data.judger.isSkuIntact
+      });
+      
     },
     onCellTap (event) {
       const cell = event.detail.cell;
