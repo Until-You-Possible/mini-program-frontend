@@ -24,6 +24,14 @@
 
                         <view wx:if="{{stock && stock >= 10}}" class="stock">库存：{{stock}} 件</view>
                         <view wx:if="{{stock && stock < 10 && stock !=0 }}" class="stock-pinch">仅剩：{{stock}} 件</view></view>
+
+                        <view wx:if="{{!noSpec}}" class="sku-pending">
+                        <text wx:if="{{!skuIntact}}">请选择：</text>
+                        <text wx:else>已选：</text>
+                        <text wx:if="{{!skuIntact}}">{{missingKeys}}</text>
+                        <text wx:else>{{currentValues}}</text>
+                    </view>
+
             <view class="sku-pending"></view>
         </view>
     </view>

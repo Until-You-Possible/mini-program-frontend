@@ -1,3 +1,4 @@
+import { Spu } from "../../pages/model/spu";
 import { FenceGroup } from "../model/fence-group";
 import { Judger } from "../model/judger";
 
@@ -23,6 +24,13 @@ Component({
     "spu": function (spu) {
       if (!spu) {
         return
+      }
+      if (Spu.isNoSpec(spu)) {
+        this.setData({
+          noSpec: true
+        });
+        this.bindSkuData(spu.sku_list[0]);
+        return;
       }
       const fenceGroup = new FenceGroup(spu);
       fenceGroup.initFences1();

@@ -21,7 +21,13 @@
         {
           "name": "pages/detail/detail",
           "pathName": "pages/detail/detail",
-          "query": "pid=2",
+          "query": "pid=12",
+          "scene": null
+        },
+        {
+          "name": "pages/detail/detail",
+          "pathName": "pages/detail/detail",
+          "query": "pid=12",
           "scene": null
         }
       ]
