@@ -26,12 +26,26 @@ Component({
         return
       }
       if (Spu.isNoSpec(spu)) {
-        this.setData({
-          noSpec: true
-        });
-        this.bindSkuData(spu.sku_list[0]);
-        return;
+        this.processNoSpec(spu);
+      } else {
+        this.processHasSpec(spu);
       }
+
+    }
+  },
+
+  /**
+   * Component methods
+   */
+  methods: {
+    processNoSpec (spu) {
+      this.setData({
+        noSpec: true
+      });
+      this.bindSkuData(spu.sku_list[0]);
+      return;
+    },
+    processHasSpec (spu) {
       const fenceGroup = new FenceGroup(spu);
       fenceGroup.initFences1();
       const judger = new Judger(fenceGroup);
@@ -43,13 +57,7 @@ Component({
         this.bindSpuData();
       }
       this.bindInitData(fenceGroup);
-    }
-  },
-
-  /**
-   * Component methods
-   */
-  methods: {
+    },
     bindSpuData () {
       const spu = this.properties.previewImg;
       if (spu) {
