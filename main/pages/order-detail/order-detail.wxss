@@ -1,0 +1,108 @@
+/* pages/order-detail/order-detail.wxss */
+
+.sku-panel{
+    background-color: #ffffff;
+    padding:30rpx;
+}
+
+.order-item {
+    margin-bottom: 40rpx !important;
+}
+
+.base-info{
+    box-sizing: border-box;
+    background-color: #ffffff;
+    width: 100%;
+    height: 148rpx;
+    padding: 30rpx;
+    font-size:24rpx;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    margin-bottom: 20rpx;
+}
+
+.base-info >view{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+.describe{
+    color: #999999;
+}
+
+.content{
+    color: #333333;
+}
+
+
+.sku-panel s-order-sku-item:last-child .order-item {
+    margin-bottom: 0 !important;
+    /*background-color: #ff6600;*/
+}
+
+.total-container{
+    color: #333333;
+    box-sizing: border-box;
+    padding: 30rpx;
+    margin-top: 20rpx;
+    font-size:24rpx;
+    background-color: #ffffff;
+}
+
+.one-row{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-bottom: 20rpx;
+}
+
+.total-container >.one-row:last-child{
+    margin-bottom: 0;
+}
+
+.flex-v-center{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+.pay-container{
+    font-size:24rpx;
+    padding-left:30rpx;
+    padding-right:30rpx;
+    border-top: 1px solid #f9f9f9;
+    height:70rpx;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.pay-btn{
+    font-size:24rpx !important;
+    border-radius: 0 !important;
+}
+
+.bottom-left{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+.countdown{
+    margin-left: 20rpx;
+}
+
+.countdown-time{
+    /*background-color: #9E2731 !important;*/
+    /*background-color: #157658 !important;*/
+    /*background-color: #9E2731;*/
+    color: #9E2731 !important; 
+    background-color: #FFE7E9 !important;
+    font-size:24rpx !important;
+    width:38rpx !important;
+    height: 38rpx !important;
+}

@@ -1,0 +1,40 @@
+.container{
+}
+.l-segment {
+    background-color: #ffffff;
+    z-index: 999 !important;
+    position: fixed;
+    top:0;
+}
+
+.segment {
+    /*position: fixed;*/
+}
+
+.active {
+
+}
+
+.line {
+    width: 40rpx !important;
+}
+
+.container{
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top:36rpx;
+}
+
+
+.empty{
+    position: fixed;
+    top:calc((100% - 340rpx - 70rpx)/2);
+    /*top:0;*/
+    right:calc((100% - 600rpx)/2);
+}
+
+/*.item {*/
+/*    margin-top: 20rpx;*/
+/*}*/

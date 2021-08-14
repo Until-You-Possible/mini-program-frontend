@@ -1,0 +1,4 @@
+
+<l-status-show bind:lintap="onGotoOrderDetail" describe="支付成功" l-button-class="btn" button-text="查看订单" l-image-class="img" show="{{true}}" image="/imgs/pay-success.png">
+
+</l-status-show>

@@ -1,0 +1,50 @@
+<view class="container">
+    <s-address bind:address="onChooseAddress"></s-address>
+
+    <view class="order-item-container">
+        <block wx:for="{{orderItems}}" wx:key="{{item.sku.id}}">
+            <s-order-sku-item l-class="order-item" order-item="{{item}}"></s-order-sku-item>
+        </block>
+    </view>
+
+    <view class="temp-price-container">
+        <view class="origin-price-container">
+            <text>商品总金额：</text>
+            <l-price value="{{totalPrice}}" size="24" color="#333"></l-price>
+        </view>
+        <view class="discount-price-container">
+            <text>优惠金额：</text>
+            <view class="discount-price">
+                <text class="minus-tag {{discountMoney==0?'':'discount-color'}}">-</text>
+                <l-price value="{{discountMoney}}" size="24" color="{{discountMoney==0?'#333':'#F55670'}}">
+
+                </l-price>
+            </view>
+        </view>
+    </view>
+
+    <s-coupon-picker bind:choose="onChooseCoupon" coupons="{{couponBOList}}"></s-coupon-picker>
+
+</view>
+
+<view class="bottom">
+    <view class="price-container">
+        <text>合计</text>
+        <l-price value="{{finalTotalPrice}}" color="#157658" size="30">
+
+        </l-price>
+    </view>
+    <l-button disabled="{{submitBtnDisable}}" bind:lintap="onSubmit" l-class="submit" bg-color="#157658"
+              height="88"
+              width="200">
+        提交订单
+    </l-button>
+</view>
+
+<l-status-show show="{{!isOk}}" describe="订单中包含有售罄/下架/超出数量的商品" type="data"></l-status-show>
+
+<l-dialog content-color="#333333" type="alert" title="订单生成失败" l-confirm-class="dialog-confirm" show="{{orderFail}}" content="{{orderFailMsg}}">
+
+</l-dialog>
+
+<l-loading></l-loading>

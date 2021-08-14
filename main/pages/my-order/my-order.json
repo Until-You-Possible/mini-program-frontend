@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "s-my-order-item": "/components/my-order-item/index"
+  }
+}

@@ -1,0 +1,139 @@
+/* pages/order/order.wxss */
+
+/* pages/order/order.wxss */
+.container {
+    padding-bottom: 100rpx;
+}
+
+.order-item-container {
+    box-sizing: border-box;
+    padding: 30rpx 30rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    width: 750rpx;
+    background-color: #ffffff;
+}
+
+.order-item {
+    margin-bottom: 20rpx !important;
+}
+
+/*.order-item:last-child{*/
+/*    background-color: #3683d6;*/
+/*}*/
+
+.order-item-container s-order-sku-item:last-child .order-item {
+    margin-bottom: 0 !important;
+    /*background-color: #ff6600;*/
+}
+
+.temp-price-container {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    padding: 20rpx 30rpx;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 24rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.origin-price-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discount-price-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discount-price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.minus-tag {
+    margin-right: 4rpx;
+    /*order: -1;*/
+}
+
+.discount-color {
+    color: #F55670;
+}
+
+.bottom {
+    box-sizing: border-box;
+    height: 88rpx;
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    padding-left: 30rpx;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 4px 0px rgba(210, 210, 210, 0.5);
+}
+
+.price-container {
+    /*height: 60rpx;*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #333333;
+    font-size: 28rpx;
+}
+
+.price-container > text {
+    margin-right: 20rpx;
+}
+
+
+.submit {
+    border-radius: 0 !important;
+}
+
+/*.dialog-content{*/
+/*    color:#333333 !important;*/
+/*}*/
+
+.dialog-confirm {
+    color: #9E2731 !important;
+}
+
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    color: #666666;
+    font-size: 24rpx;
+}
+
+.dialog-content text:before {
+    content: '•';
+    margin-right: 10rpx;
+    color: #9E2731;
+    /*color:red;*/
+}
+
+.dialog-title {
+    color: #333333 !important;
+}
+
+.toast {
+    font-size: 24rpx !important;
+}
+
+/*.text:before{*/
+/*}*/
+
+

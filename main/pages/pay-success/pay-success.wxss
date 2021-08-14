@@ -1,0 +1,14 @@
+/* pages/pay-success/pay-success.wxss */
+
+.img{
+    width:120rpx !important;
+    height: 120rpx !important;
+}
+
+
+.btn{
+    border-radius: 2rpx !important;
+    background-color: #157658 !important;
+    height:60rpx !important;
+    /*width:70rpx !important;*/
+}

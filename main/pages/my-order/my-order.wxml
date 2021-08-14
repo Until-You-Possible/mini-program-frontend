@@ -1,0 +1,21 @@
+<l-segment bind:linchange="onSegmentChange" active-key="{{activeKey}}" class="segment" l-class="l-segment"
+           active-color="#157658" l-class-active="active" l-class-line="line">
+    <l-segment-item tab="全部" key="0"></l-segment-item>
+    <l-segment-item tab="待付款" key="1"></l-segment-item>
+    <l-segment-item tab="待发货" key="2"></l-segment-item>
+    <l-segment-item tab="待收货" key="3"></l-segment-item>
+    <l-segment-item tab="已完成" key="4"></l-segment-item>
+</l-segment>
+<view class="container" wx:if="{{!empty}}">
+    <l-loadmore show="{{bottomLoading}}" type="{{loadingType}}" loading-text="努力加载中..." end-text="—— 7七月作品 ——">
+        <view slot="content" class="container">
+            <block wx:for="{{items}}" wx:key="index">
+                <s-my-order-item bind:paysuccess="onPaySuccess" class="item" item="{{item}}"></s-my-order-item>
+            </block>
+        </view>
+    </l-loadmore>
+</view>
+
+<view class="empty">
+    <s-empty></s-empty>
+</view>

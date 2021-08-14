@@ -1,0 +1,57 @@
+<view class="container">
+    <s-order-address address="{{order.snap_address}}" status="{{order.status}}">
+    </s-order-address>
+    <view class="base-info">
+        <view>
+            <text class="describe">订单编号</text>
+            <text class="content">{{order.order_no}}</text>
+        </view>
+        <view>
+            <text class="describe">下单时间</text>
+            <text class="content">{{order.createTime}}</text>
+        </view>
+    </view>
+    <view class="sku-panel">
+        <block wx:for="{{order.snap_items}}" wx:key="{{index}}">
+            <s-order-sku-item l-class="order-item" order-item="{{item}}"></s-order-sku-item>
+        </block>
+    </view>
+    <view class="total-container">
+        <view class="one-row">
+            <text>商品总金额：</text>
+            <l-price color="#333333" size="24" value="{{order.total_price}}">
+
+            </l-price>
+        </view>
+        <view class="one-row">
+            <text>优惠总金额：</text>
+            <view class="flex-v-center">
+                <text style="color:#9E2731">-</text>
+                <l-price size="24" color="#9E2731" value="{{order.discountPrice}}"></l-price>
+            </view>
+        </view>
+        <view class="one-row">
+            <text>共 {{order.total_count}} 件商品，实际支付：</text>
+            <l-price color="#333333" size="24" value="{{order.final_total_price}}"></l-price>
+        </view>
+    </view>
+    <view wx:if="{{order.status===1}}" class="pay-container">
+        <view class="bottom-left">
+            <text>剩余支付时间</text>
+            <l-countdown  l-class="countdown"
+                         l-class-time="countdown-time"
+                         bind:linend="onCountdownEnd"
+                         time-type="second"
+                         time="{{order.leftPeriod}}"
+                         format="{%m}:{%s}"></l-countdown>
+        </view>
+        <l-button  bg-color="#9E2731"
+                   bind:lintap="onPay"
+                  l-class="pay-btn"
+                  width="100"
+                  height="48">
+            支 付
+        </l-button>
+    </view>
+</view>
+<l-loading></l-loading>
