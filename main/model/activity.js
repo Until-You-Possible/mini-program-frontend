@@ -1,4 +1,4 @@
-import { Http } from "../../utils/http";
+import { Http } from "../utils/http";
 
 export class Activity {
   static locationD = 'a-2';

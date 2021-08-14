@@ -1,5 +1,5 @@
-import { Http } from "../../utils/http";
-import { Paging } from "../../utils/paging";
+import { Http } from "../utils/http";
+import { Paging } from "../utils/paging";
 
 
 export class SpuPaging {

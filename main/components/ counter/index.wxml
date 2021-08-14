@@ -1,6 +1,11 @@
 <!--components/ counter/index.wxml-->
-
 <l-counter l-count-class="all-background input-size"
            l-symbol-class="all-background font-color"
            l-disabled-class="all-background"
-           l-class="container"></l-counter>
+           l-class="container"
+           count = "{{count}}"
+           min = "{{min}}"
+           max = "{{max}}"
+>
+
+</l-counter>

@@ -1,4 +1,4 @@
-import { Spu } from "../../pages/model/spu";
+import { Spu } from "../../model/spu";
 import { FenceGroup } from "../model/fence-group";
 import { Judger } from "../model/judger";
 

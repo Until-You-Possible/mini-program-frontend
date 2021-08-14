@@ -1,5 +1,5 @@
 // components/hot-list/index.js
-import { Banner } from "../../pages/model/banner";
+import { Banner } from "../../model/banner";
 Component({
   /**
    * Component properties

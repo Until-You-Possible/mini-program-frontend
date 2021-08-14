@@ -1,4 +1,4 @@
-import { Http } from "../../utils/http";
+import { Http } from "../utils/http";
 
 export class Category {
   static async getGridCategoryC () {

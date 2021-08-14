@@ -1,11 +1,11 @@
 // pages/home/home.js
 
 
-import { Theme }      from "../model/theme.js";
-import { Banner }     from "../model/banner.js";
-import { Category }   from "../model/category.js";
-import { Activity }   from "../model/activity.js";
-import { SpuPaging } from "../model/spu-paging.js";
+import { Theme }      from "../../model/theme.js";
+import { Banner }     from "../../model/banner.js";
+import { Category }   from "../../model/category.js";
+import { Activity }   from "../../model/activity.js";
+import { SpuPaging } from "../../model/spu-paging.js";
 
 Page({
   

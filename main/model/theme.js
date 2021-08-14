@@ -1,6 +1,6 @@
 // theme
 
-import { Http } from "../../utils/http";
+import { Http } from "../utils/http";
 
 export class Theme {
 

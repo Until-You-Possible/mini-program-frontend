@@ -1,5 +1,5 @@
 
-import { config } from "../pages/config/config";
+import { config } from "../config/config";
 import { promisic } from "./utils";
 
 class Http {
