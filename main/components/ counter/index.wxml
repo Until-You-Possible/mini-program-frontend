@@ -6,6 +6,7 @@
            count = "{{count}}"
            min = "{{min}}"
            max = "{{max}}"
+           bind:linout="onOverStep"
 >
 
 </l-counter>
