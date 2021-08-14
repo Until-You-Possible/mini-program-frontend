@@ -43,6 +43,18 @@ class Judger  {
     return this.skuPending.isIntact();
   }
 
+  getCurrentValues() {
+      return this.skuPending.getCurrentSpecValues()
+  }
+
+  getMissingKeys() {
+      const missingKeysIndex = this.skuPending.getMissingSpecKeysIndex()
+      return missingKeysIndex.map(i => {
+          return this.fenceGroup.fences[i].title
+      })
+  }
+
+
   judge (cell, x, y, isInit = false) { 
     if (!isInit) {
       this._changeCurrentCellStatus(cell, x, y);
@@ -90,6 +102,12 @@ class Judger  {
     return spec.key_id + '-' + spec.value_id
   }
 
+  getDeterminateSku() {
+      const code = this.skuPending.getSkuCode();
+      const sku = this.fenceGroup.getSku(code);
+      console.log("sku", sku);
+      return sku
+  }
   _changeCurrentCellStatus (cell,x,y) {
     if (cell.status === CellStatus.WAITING) {
       this.fenceGroup.setCellStatusByXY(x, y, CellStatus.SELECTED);

@@ -14,6 +14,9 @@ class Cell {
   _getCellCode () {
     return this.spec.key_id + "-" + this.spec.value_id;
   }
+  getCellCode() {
+    return this.spec.key_id + '-' + this.spec.value_id
+}
   
 }
 

@@ -52,6 +52,11 @@ class FenceGroup {
     const fence = new Fence();
     return fence;
   }
+  getSku(skuCode) {
+      const fullSkuCode = this.spu.id + '$' + skuCode;
+      const sku = this.spu.sku_list.find(s => s.code === fullSkuCode)
+      return sku ? sku : null
+  }
   getDefaultSku () {
     const defaultId = this.spu.default_sku_id;
     if (!defaultId) {

@@ -43,7 +43,16 @@
 
    <view class="counter-container">
        <text>购买数量</text>
-       <s-counter></s-counter>
+       <s-counter bind:lintap="onSelectCount"></s-counter>
    </view>
 
+</view>
+
+<view wx:if="{{!outStock}}" bind:tap="onBuyOrCart" class="bottom-btn">
+    <text wx:if="{{orderWay==='cart'}}">加入购物车</text>
+    <text wx:else>立即购买</text>
+</view>
+
+<view wx:else class="bottom-btn out-stock">
+    <text>暂时缺货</text>
 </view>

@@ -1,3 +1,4 @@
+import { Joiner } from "../../utils/joiner";
 import { Cell } from "./cell";
 import { SkuCode } from "./sku-code";
 
@@ -17,6 +18,34 @@ class SkuPending {
     }
   }
 
+  getCurrentSpecValues() {
+      const values = this.pending.map(cell => {
+          return cell ? cell.spec.value : null
+      })
+      return values
+  }
+  getSkuCode() {
+      const joiner = new Joiner('#');
+      console.log("this.pending", this.pending);
+      this.pending.forEach(cell => {
+        if (cell) {
+          const cellCode = cell.getCellCode()
+          joiner.join(cellCode)
+        }
+      })
+      return joiner.getStr()
+  }
+
+  getMissingSpecKeysIndex() {
+      const keysIndex = []
+      for (let i = 0; i < this.size; i++) {
+          if(!this.pending[i]){
+              keysIndex.push(i)
+          }
+      }
+      return keysIndex
+  }
+
   isIntact () {
     if (this.size !== this.pending.length) {
       return false;
@@ -33,6 +62,7 @@ class SkuPending {
 
   insertCell (cell, x) {
     this.pending[x] = cell;
+    console.log("cell", cell);
   }
 
   removeCell (x) {

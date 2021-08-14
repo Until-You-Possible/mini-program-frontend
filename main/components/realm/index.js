@@ -9,7 +9,8 @@ Component({
    */
   properties: {
     spu: Object,
-    x: Number
+    x: Number,
+    currentSkuCount: Number
   },
 
   /**
@@ -45,6 +46,15 @@ Component({
       this.bindSkuData(spu.sku_list[0]);
       return;
     },
+    setStockStatus(stock, currentCount) {
+      console.log("fff", this.isOutOfStock(stock, currentCount));
+        this.setData({
+            outStock: this.isOutOfStock(stock, currentCount)
+        });
+    },
+    isOutOfStock (stock, currentStock) {
+      return stock < currentStock;
+    },
     processHasSpec (spu) {
       const fenceGroup = new FenceGroup(spu);
       fenceGroup.initFences1();
@@ -70,12 +80,16 @@ Component({
       }
     },
     bindSkuData (sku) {
+      if (!sku) {
+        return false;
+      }
         this.setData({
           previewImg: sku.img,
           title: sku.title,
           price: sku.price,
           discountPrice: sku.discount_price,
-          stock: sku.stock
+          stock: 5
+          // stock: sku.stock
         });
     },
     bindInitData (fenceGroup) {
@@ -85,6 +99,21 @@ Component({
       });
       
     },
+    bindTipData() {
+      this.setData({
+          skuIntact: this.data.judger.isSkuIntact(),
+          currentValues: this.data.judger.getCurrentValues(),
+          missingKeys: this.data.judger.getMissingKeys()
+      })
+  },
+  bindFenceGroupData(fenceGroup) {
+      this.setData({
+          fences: fenceGroup.fences,
+      })
+  },
+  onSelectCount (event) {
+    this.currentSkuCount  = event.detail.count;
+  },
     onCellTap (event) {
       const cell = event.detail.cell;
       const x = event.detail.x;
@@ -93,7 +122,18 @@ Component({
       judger.judge(cell, x, y);
       this.setData({
         fences: judger.fenceGroup.fences
-      })
+      });
+      const skuIntact = judger.isSkuIntact();
+      console.log("skuIntact", skuIntact);
+      if (!skuIntact) {
+          const currentSku = judger.getDeterminateSku();
+          console.log("currentSku", currentSku);
+          this.bindSkuData(currentSku)
+          this.setStockStatus(currentSku.stock, this.data.currentSkuCount)
+      }
+      this.bindTipData()
+      this.bindFenceGroupData(judger.fenceGroup)
+      // this.triggerSpecEvent();
     }
   }
 })
