@@ -2,6 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fde1f7ba-404b-4eb5-a994-ed0f42995c0d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/main/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/components/realm/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/main/components/realm/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/components/realm/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/main/components/realm/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/my-coupon/my-coupon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/my-coupon/my-coupon.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/my-coupon/my-coupon.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/my-coupon/my-coupon.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/my-order/my-order.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/my-order/my-order.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/my-order/my-order.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/my-order/my-order.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/order-detail/order-detail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/order-detail/order-detail.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/order-detail/order-detail.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/order-detail/order-detail.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/order/order.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/order/order.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/order/order.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/order/order.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/pay-success/pay-success.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/pay-success/pay-success.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/pay-success/pay-success.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/pay-success/pay-success.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/search/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/search/search.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/search/search.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pages/search/search.wxss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/main/project.config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +50,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main/pages" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/main/pages" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -36,6 +70,7 @@
       <workItem from="1623313037354" duration="2203000" />
       <workItem from="1623377633798" duration="356000" />
       <workItem from="1623402142858" duration="3026000" />
+      <workItem from="1628908738351" duration="687000" />
     </task>
     <servers />
   </component>
@@ -52,5 +87,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

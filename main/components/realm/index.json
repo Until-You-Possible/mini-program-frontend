@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "s-fence": "/components/fence/index"
+    "s-fence": "/components/fence/index",
+    "s-counter": "/components/ counter/index"
   }
 }

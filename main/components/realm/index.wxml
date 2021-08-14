@@ -3,7 +3,7 @@
 <view class="container">
    <view class="">
     <view class="sku-preview">
-    <image class="sku-img" src="{{previewImg}}"></image>
+         <image class="sku-img" src="{{previewImg}}"></image>
     <view class="sku-description">
         <view class="title">{{title}}</view>
         <view>
@@ -42,7 +42,8 @@
    </block>
 
    <view class="counter-container">
-       <l-counter></l-counter>
+       <text>购买数量</text>
+       <s-counter></s-counter>
    </view>
 
 </view>

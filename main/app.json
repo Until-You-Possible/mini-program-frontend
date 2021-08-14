@@ -2,7 +2,8 @@
   "pages": [
     "pages/home/home",
     "components/category-grid/index",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "components/ counter/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
