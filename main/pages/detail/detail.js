@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    spu: null
+    spu: null,
+    showRealm: false
   },
 
   /**
@@ -18,6 +19,24 @@ Page({
     this.setData({
       spu
     })
+  },
+  onGotoHome () {
+
+  },
+  onGotoCart() {
+    this.setData({
+      showRealm: true
+    });
+  },
+  onBuy () {
+    this.setData({
+      showRealm: true
+    });
+  },
+  onAddToCart () {
+    this.setData({
+      showRealm: true
+    });
   },
 
   /**

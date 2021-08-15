@@ -1,0 +1,25 @@
+<!--components/tab-bar/index.wxml-->
+<view class="container">
+
+    <view class="icons">
+        <view bind:tap="onGoToHome">
+            <l-icon size="46" name="home" l-class="sleeve"></l-icon>
+            <text>首页</text>
+        </view>
+
+        <view bind:tap="onGoToCart">
+            <l-badge show="{{cartItemCount!==0}}" value="{{cartItemCount}}">
+                <l-icon name="cart" size="46" color="#157658"></l-icon>
+            </l-badge>
+            <text>购物车</text>
+        </view>
+    </view>
+
+    <view bind:tap="onAddToCart" class="cart btn-font">
+        <text>加入购物车</text>
+    </view>
+
+    <view bind:tap="onBuy" class="buy btn-font">
+        <text>立即购买</text>
+    </view>
+</view>

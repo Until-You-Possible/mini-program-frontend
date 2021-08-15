@@ -1,7 +1,12 @@
 <!--pages/home/detail/detail.wxml-->
 
-<view class="container">
-
-<s-realm spu="{{spu}}"></s-realm>
-
-</view>
+  <l-popup content-align="bottom" show="{{showRealm}}">
+    <s-realm spu="{{spu}}"></s-realm>
+  </l-popup>
+<s-tab-bar class="tabbar"
+          cart-item-count="{{cartItemCount}}"
+          bind:gotohome="onGotoHome"
+          bind:gotocart="onGotoCart"
+          bind:addtocart="onAddToCart"
+          bind:buy="onBuy"
+></s-tab-bar>
