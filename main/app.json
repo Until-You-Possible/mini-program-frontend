@@ -9,7 +9,8 @@
     "pages/my/index",
     "pages/cart/cart",
     "pages/category/category",
-    "pages/my/my"
+    "pages/my/my",
+    "components/spu-description/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,89 @@
+.sleeve{
+  font-family: sleeve !important;
+  color:#157658 !important;
+}
+
+.container{
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  padding:34rpx 30rpx 26rpx 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tags{
+  display: flex;
+}
+
+.l-tag{
+  margin-right:6rpx !important;
+}
+
+.left{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle{
+  color: #999999;
+  font-size: 28rpx;
+  font-weight: 400;
+  margin-top:40rpx;
+  margin-bottom: 16rpx;
+}
+
+.price-row{
+  display: flex;
+  align-items: baseline;
+}
+
+.l-price-unit{
+  margin-right: 14rpx !important;
+}
+
+.discount-price{
+  margin-left: 20rpx;
+  margin-right: 80rpx;
+}
+
+.discount-tag{
+  position: relative !important;
+  bottom: 4rpx;
+  width: 50rpx;
+  border-radius:20rpx !important;
+}
+
+.right{
+  margin-left:20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 78rpx;
+  height: 120rpx;
+  border-left: 2px dashed #F5F5F5;
+}
+
+
+.inner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background-color: #DCEBE6;
+  width: 50rpx;
+  height: 120rpx;
+}
+
+.inner text{
+  font-size:20rpx;
+  color: #157658;
+}
+
+
+
+
+
+

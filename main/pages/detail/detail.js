@@ -9,6 +9,7 @@ Page({
   data: {
     spu: null,
     showRealm: false,
+    cartItemCount: 999,
     orderWay: "Cart"
   },
 

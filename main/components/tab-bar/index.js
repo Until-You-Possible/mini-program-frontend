@@ -4,14 +4,13 @@ Component({
    * Component properties
    */
   properties: {
-
+    cartItemCount: Number
   },
 
   /**
    * Component initial data
    */
   data: {
-
   },
 
   /**
