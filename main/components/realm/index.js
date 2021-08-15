@@ -63,6 +63,7 @@ Component({
       const defaultSku = fenceGroup.getDefaultSku();
       if (defaultSku) {
         this.bindSkuData(defaultSku);
+        this.setStockStatus(defaultSku.stock, this.data.currentSkuCount);
       } else {
         this.bindSpuData();
       }
@@ -113,6 +114,15 @@ Component({
   },
   onSelectCount (event) {
     this.currentSkuCount  = event.detail.count;
+    if (event.detail.count > 5) {
+      this.setData({
+        outStock: true
+      });
+    } else {
+      this.setData({
+        outStock: false
+      });
+    }
   },
     onCellTap (event) {
       const cell = event.detail.cell;
@@ -124,10 +134,8 @@ Component({
         fences: judger.fenceGroup.fences
       });
       const skuIntact = judger.isSkuIntact();
-      console.log("skuIntact", skuIntact);
       if (!skuIntact) {
           const currentSku = judger.getDeterminateSku();
-          console.log("currentSku", currentSku);
           this.bindSkuData(currentSku)
           this.setStockStatus(currentSku.stock, this.data.currentSkuCount)
       }
