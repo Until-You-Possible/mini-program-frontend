@@ -41,6 +41,9 @@ class FenceGroup {
     const AT = matrix.transpose();
     AT.forEach(r => {
       const fence = new Fence(r);
+      if (this._hasSketchFence() && this._isSketchFence(fence.id)) {
+        fence.setFenceSketch(this.skuList)
+      }
       fence.init();
       fences.push(fence);
     });
@@ -63,6 +66,13 @@ class FenceGroup {
       return false;
     }
     return this.skuList.find(v => v.id === defaultId);
+  }
+  _hasSketchFence() {
+      return this.spu.sketch_spec_id ? true : false
+  }
+
+  _isSketchFence(fenceId) {
+      return this.spu.sketch_spec_id === fenceId ? true : false
   }
 
   eachCell (cb) {

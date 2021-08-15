@@ -15,7 +15,11 @@ class Fence {
   init () {
     this._initCells();
   }
-
+  setFenceSketch(skuList) {
+    this.cells.forEach(c=>{
+        this._setCellSkuImg(c, skuList)
+    })
+}
   _initCells () {
     this.specs.forEach(s => {
       const exsited = this.cells.some(c => c.id === s.value_id);
