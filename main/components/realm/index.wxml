@@ -1,5 +1,7 @@
 <!--components/realm/index.wxml-->
 <wxs src="../../wxs/price.wxs" module="p"></wxs>
+
+<scroll-view scroll-y="">
 <view class="container">
    <view class="">
     <view class="sku-preview">
@@ -47,6 +49,7 @@
    </view>
 
 </view>
+</scroll-view>
 
 <view wx:if="{{!outStock}}" bind:tap="onBuyOrCart" class="bottom-btn">
     <text wx:if="{{orderWay==='cart'}}">加入购物车</text>

@@ -10,7 +10,8 @@ Component({
   properties: {
     spu: Object,
     x: Number,
-    currentSkuCount: Number
+    currentSkuCount: Number,
+    orderWay: String
   },
 
   /**

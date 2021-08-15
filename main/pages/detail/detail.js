@@ -1,3 +1,4 @@
+import { ShoppingWay } from "../../core/enum";
 import { Spu } from "../../model/spu";
 
 Page({
@@ -7,7 +8,8 @@ Page({
    */
   data: {
     spu: null,
-    showRealm: false
+    showRealm: false,
+    orderWay: "Cart"
   },
 
   /**
@@ -21,21 +23,26 @@ Page({
     })
   },
   onGotoHome () {
-
+    wx.switchTab({
+      url: '/pages/home/home'
+    });
   },
   onGotoCart() {
     this.setData({
-      showRealm: true
+      showRealm: true,
+      orderWay: ShoppingWay.CART
     });
   },
   onBuy () {
     this.setData({
-      showRealm: true
+      showRealm: true,
+      orderWay: ShoppingWay.BUY
     });
   },
   onAddToCart () {
     this.setData({
-      showRealm: true
+      showRealm: true,
+      orderWay: ShoppingWay.CART
     });
   },
 
