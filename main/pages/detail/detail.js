@@ -1,4 +1,5 @@
 import { ShoppingWay } from "../../core/enum";
+import { SaleExplain } from "../../model/sale-explain";
 import { Spu } from "../../model/spu";
 
 Page({
@@ -10,7 +11,8 @@ Page({
     spu: null,
     showRealm: false,
     cartItemCount: 999,
-    orderWay: "Cart"
+    orderWay: "Cart",
+    explain: []
   },
 
   /**
@@ -19,9 +21,12 @@ Page({
   onLoad: async function (options) {
     const id = options.pid;
     const spu = await Spu.getDeail(id);
+    const explain = await SaleExplain.getFixed();
+    console.log("explain", explain);
     this.setData({
-      spu
-    })
+      spu,
+      explain
+    });
   },
   onGotoHome () {
     wx.switchTab({

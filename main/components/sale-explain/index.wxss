@@ -1,0 +1,34 @@
+/* components/sale-explain/index.wxss */
+
+
+.container{
+  box-sizing: border-box;
+  width: 710rpx;
+  border: 2rpx dashed #dcebe6;
+  display:flex;
+  flex-direction:column;
+  padding:5rpx 25rpx;
+  background-color: #ffffff;
+}
+
+.inner{
+  height:50rpx;
+  border-bottom: 2rpx solid #dcebe6;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  font-size:24rpx;
+  color: #333333;
+}
+
+.inner text:before{
+  content: '•';
+  margin-right: 26rpx;
+}
+
+.container > .inner:last-child{
+  border: none;
+}
+
+
+

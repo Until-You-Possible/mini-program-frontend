@@ -3,6 +3,7 @@
   "usingComponents": {
     "s-realm": "/components/realm/index",
     "s-tab-bar": "/components/tab-bar/index",
-    "s-spu-description": "/components/spu-description/index"
+    "s-spu-description": "/components/spu-description/index",
+    "s-sale-explain": "/components/sale-explain/index"
   }
 }

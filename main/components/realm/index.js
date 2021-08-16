@@ -56,6 +56,21 @@ Component({
     isOutOfStock (stock, currentStock) {
       return stock < currentStock;
     },
+    triggerSpecEvent() {
+      const noSpec = Spu.isNoSpec(this.properties.spu)
+      if (noSpec) {
+          this.triggerEvent('specchange', {
+              noSpec
+          })
+      } else {
+          this.triggerEvent('specchange', {
+              noSpec: Spu.isNoSpec(this.properties.spu),
+              skuIntact: this.data.judger.isSkuIntact(),
+              currentValues: this.data.judger.getCurrentValues(),
+              missingKeys: this.data.judger.getMissingKeys()
+          })
+      }
+  },
     processHasSpec (spu) {
       const fenceGroup = new FenceGroup(spu);
       fenceGroup.initFences1();

@@ -26,7 +26,6 @@ class SkuPending {
   }
   getSkuCode() {
       const joiner = new Joiner('#');
-      console.log("this.pending", this.pending);
       this.pending.forEach(cell => {
         if (cell) {
           const cellCode = cell.getCellCode()
@@ -62,7 +61,7 @@ class SkuPending {
 
   insertCell (cell, x) {
     this.pending[x] = cell;
-    console.log("cell", cell);
+    
   }
 
   removeCell (x) {

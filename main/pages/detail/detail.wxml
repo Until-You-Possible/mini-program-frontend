@@ -14,7 +14,7 @@
 
     <view bind:tap="onGoToCouponCenter" class="coupon-container" wx:if="{{coupons.length!=0}}">
         <view class="coupon-left">
-            <block wx:for="{{coupons}}">
+            <block wx:for="{{coupons}}"  wx:key="index">
                 <s-coupon-mini text="{{item.title}}"></s-coupon-mini>
             </block>
         </view>
