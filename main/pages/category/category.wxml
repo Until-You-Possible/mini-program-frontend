@@ -1,2 +1,20 @@
 <!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+
+<view class="container">
+    <view class="search-container">
+        <l-button
+                width="710"
+                height="60"
+                icon="research"
+                icon-size="24"
+                icon-color="#C4C9D2"
+                l-class="search-btn"
+                bind:lintap="onGotoSearch"
+                shape="square">
+            搜索商品
+        </l-button>
+    </view>
+    <view class="main">
+
+    </view>
+</view>

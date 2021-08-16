@@ -10,7 +10,9 @@
     "pages/cart/cart",
     "pages/category/category",
     "pages/my/my",
-    "components/spu-description/index"
+    "components/spu-description/index",
+    "pages/search/index",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",

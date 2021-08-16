@@ -22,7 +22,6 @@ Page({
     const id = options.pid;
     const spu = await Spu.getDeail(id);
     const explain = await SaleExplain.getFixed();
-    console.log("explain", explain);
     this.setData({
       spu,
       explain

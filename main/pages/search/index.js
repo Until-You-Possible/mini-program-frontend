@@ -1,4 +1,4 @@
-// pages/category/category.js
+// pages/search/index.js
 Page({
 
   /**
@@ -35,10 +35,26 @@ Page({
   onHide: function () {
 
   },
-  onGotoSearch(event) {
-      wx.navigateTo({
-          url: `/pages/search/search`
-      })
+
+  /**
+   * Lifecycle function--Called when page unload
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * Page event handler function--Called when user drop down
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * Called when page reach bottom
+   */
+  onReachBottom: function () {
+
   },
 
   /**
