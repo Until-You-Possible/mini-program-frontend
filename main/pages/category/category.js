@@ -1,3 +1,5 @@
+import { Categories } from "../../model/categories";
+
 // pages/category/category.js
 Page({
 
@@ -11,29 +13,28 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
-
+  onLoad: async function (options) {
+    this.initCategoryData();
   },
-
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
-
+  async initCategoryData () {
+    const categories = new Categories();
+    this.data.categories = categories
+    await categories.getAll()
+    const roots = categories.getRoots()
+    const defaultRoot = this.getDefaultRoot(roots)
+    const currentSubs = categories.getSubs(defaultRoot.id)
+    this.setData({
+        roots,
+        currentSubs,
+        currentBannerImg: defaultRoot.img
+    })
   },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
+  getDefaultRoot(roots) {
+      let defaultRoot = roots.find(r => r.id === this.data.defaultRootId)
+      if (!defaultRoot) {
+          defaultRoot = roots[0]
+      }
+      return defaultRoot
   },
   onGotoSearch(event) {
       wx.navigateTo({

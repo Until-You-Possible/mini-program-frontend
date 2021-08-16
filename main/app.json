@@ -1,17 +1,11 @@
 {
   "pages": [
     "pages/home/home",
-    "components/category-grid/index",
     "pages/detail/detail",
-    "components/ counter/index",
     "pages/cart/index",
-    "pages/category/index",
-    "pages/my/index",
     "pages/cart/cart",
     "pages/category/category",
     "pages/my/my",
-    "components/spu-description/index",
-    "pages/search/index",
     "pages/search/search"
   ],
   "window": {

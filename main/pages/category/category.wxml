@@ -15,6 +15,21 @@
         </l-button>
     </view>
     <view class="main">
-
+      <l-segment
+                active-key="{{defaultRootId}}"
+                height="{{segHeight}}"
+                item-height="90"
+                even="{{false}}"
+                width="160"
+                scrollable
+                bind:linchange="onSegChange"
+                l-active-class="segment-item-active"
+                l-inactive-class="segment-item"
+                l-line-class="l-seg-line"
+                placement="left">
+            <block wx:for="{{roots}}" wx:key="index">
+               <l-segment-item key="{{item.id}}" tab="{{item.name}}"></l-segment-item>
+            </block>
+        </l-segment>
     </view>
 </view>
