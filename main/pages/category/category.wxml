@@ -31,5 +31,10 @@
                <l-segment-item key="{{item.id}}" tab="{{item.name}}"></l-segment-item>
             </block>
         </l-segment>
+        <view class="right">
+            <s-sub-category bind:itemtap="onJumpToSpuList" 
+            categories="{{currentSubs}}" 
+            bannerImg="{{currentBannerImg}}"></s-sub-category>
+        </view>
     </view>
 </view>

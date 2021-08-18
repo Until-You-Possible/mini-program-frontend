@@ -1,0 +1,46 @@
+/* components/sub-category/index.wxss */
+.container{
+  width: 510rpx;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.inner-container{
+  width: 510rpx;
+}
+
+
+.grid-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 36rpx;
+}
+
+.grid-item image{
+  width: 100rpx;
+  height:100rpx;
+}
+
+.grid-item text{
+  margin-top: 6rpx;
+  font-size: 20rpx;
+  color: #333333;
+}
+
+
+.banner {
+  width: 510rpx;
+  height:200rpx;
+  margin-top: 16rpx;
+}
+
+.title{
+  margin-top:70rpx;
+  font-size:24rpx;
+  color: #999999;
+  margin-bottom:30rpx;
+}
+
+
