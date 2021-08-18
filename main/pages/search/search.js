@@ -1,66 +1,72 @@
 // pages/search/search.js
+import { HistoryKeyword } from "../../model/history-keyword";
+import { Tag } from "../../model/tag";
+import { Search } from "../../model/search";
+import { showToast } from "../../utils/ui";
+
+const history = new HistoryKeyword()
 Page({
 
-  /**
-   * Page initial data
-   */
-  data: {
+    data: {
+        loadingType:'end'
+    },
 
-  },
+    onLoad: async function (options) {
+        const historyTags = history.get()
+        const hotTags = await Tag.getSearchTags()
+        this.setData({
+            historyTags,
+            hotTags
+        })
+    },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad: function (options) {
+    async onSearch(event) {
+        this.setData({
+            search: true,
+            items: []
+        })
+        const keyword = event.detail.value || event.detail.name
+        if (!keyword) {
+            showToast('请输入关键字')
+            return
+        }
+        // const keyword = event.detail.name
+        history.save(keyword)
 
-  },
+        this.setData({
+            historyTags: history.get()
+        })
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
+        const paging = Search.search(keyword)
+        wx.lin.showLoading({
+            color:'#157658',
+            type:'flash',
+            fullScreen:true
+        })
+        const data = await paging.getMoreData()
+        wx.lin.hideLoading()
+        this.bindItems(data)
+    },
 
-  },
+    onCancel(event) {
+        this.setData({
+            search: false
+        })
+    },
 
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
+    bindItems(data) {
+        if (data.accumulator.length !== 0) {
+            this.setData({
+                items: data.accumulator
+            })
+        }
+    },
 
-  },
+    onDeleteHistory(event) {
+        history.clear()
+        this.setData({
+            historyTags: []
+        })
+    }
 
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
-  }
 })
