@@ -1,4 +1,5 @@
 import { Categories } from "../../model/categories";
+import { getWindowHeightRpx } from "../../utils/system";
 
 // pages/category/category.js
 Page({
@@ -7,7 +8,7 @@ Page({
    * Page initial data
    */
   data: {
-
+    segHeight: ""
   },
 
   /**
@@ -15,6 +16,12 @@ Page({
    */
   onLoad: async function (options) {
     this.initCategoryData();
+    const result = await getWindowHeightRpx()
+    const      h =  result - 60 -20 - 2;
+    this.setData({
+      segHeight: h
+    })
+    console.log("results", result);
   },
   async initCategoryData () {
     const categories = new Categories();
