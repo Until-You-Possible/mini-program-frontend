@@ -1,6 +1,6 @@
 import { Categories } from "../../model/categories";
 import { getWindowHeightRpx } from "../../utils/system";
-
+import { SpuListType } from "../../core/enum";
 // pages/category/category.js
 Page({
 
