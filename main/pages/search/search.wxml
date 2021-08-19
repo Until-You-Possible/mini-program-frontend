@@ -48,7 +48,7 @@
         </view>
     </view>
     <view wx:else>
-        <l-loadmore show end-text="- 学习小程序 -" type="{{loadingType}}" loading-text="努力加载中...">
+        <l-loadmore show end-text="底部提示文字" type="{{loadingType}}" loading-text="努力加载中...">
             <view slot="content" hidden="{{!search}}" class="spu-bottom">
                 <block wx:for="{{items}}">
                     <s-spu-preview-r data="{{item}}"></s-spu-preview-r>

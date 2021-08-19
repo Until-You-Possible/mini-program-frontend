@@ -8,7 +8,12 @@ class HistoryKeyword {
     return this.keywords;
   }
   constructor () {
-    this.keywords = this._getLocalKeywords();
+    if (HistoryKeyword.instance === "object") {
+      return HistoryKeyword.instance;
+    }
+    this.keyword = this._getLocalKeywords();
+    HistoryKeyword.instance = this;
+    return this;
   }
   save (keyword) {
     const items = this.keywords.filter(v => v === keyword);
@@ -39,5 +44,5 @@ class HistoryKeyword {
 }
 
 export {
-  HistoryKeyword  
+  HistoryKeyword
 }

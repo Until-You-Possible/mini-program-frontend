@@ -4,7 +4,7 @@ import { Tag } from "../../model/tag";
 import { Search } from "../../model/search";
 import { showToast } from "../../utils/ui";
 
-const history = new HistoryKeyword()
+const history = new HistoryKeyword();
 Page({
 
     data: {
