@@ -1,0 +1,38 @@
+<!--components/spu-preview-r/index.wxml-->
+<wxs src="../../wxs/price.wxs" module="p"></wxs>
+
+<view  hover-stay-time="300" data-pid="{{data.id}}" bind:tap="onItemTap" class="container">
+    <image class="discount-tag" src="/components/imgs/discount.png" wx:if="{{data.discount_price}}"></image>
+    <image bind:load="onLoadImg"
+           class="img" src="{{data.img}}" mode="aspectFit"></image>
+    <view class="content-container">
+        <text class="title">{{data.title}}</text>
+        <view class="tags">
+            <block wx:for="{{tags}}">
+                <l-tag l-class="l-tag-class" type="padding" size="super-mini">{{item}}</l-tag>
+            </block>
+        </view>
+        <view class="price-row">
+            <l-price
+                    wx:if="{{p.mainPrice(data.price, data.discount_price).display}}"
+                    value="{{p.mainPrice(data.price, data.discount_price).price}}"
+                    autofix="{{true}}"
+                    bold="{{400}}"
+                    color="#157658"
+                    count-size="28"
+                    unit-size="20"
+            >
+            </l-price>
+            <l-price wx:if="{{p.slashedPrice(data.price, data.discount_price).display}}"
+                     value="{{p.slashedPrice(data.price, data.discount_price).price}}"
+                     l-class="discount-price"
+                     size="20"
+                     unit-size="20"
+                     color="#999"
+                     bold="400"
+                     deleted="{{true}}">
+            </l-price>
+        </view>
+        <text class="subtitle">{{data.subtitle}}</text>
+    </view>
+</view>

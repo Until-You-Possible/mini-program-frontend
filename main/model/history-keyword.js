@@ -8,7 +8,12 @@ class HistoryKeyword {
     return this.keyword;
   }
   constructor () {
+    if (HistoryKeyword.instance === "object") {
+      return HistoryKeyword.instance;
+    }
     this.keyword = this._getLocalKeywords();
+    HistoryKeyword.instance = this;
+    return this;
   }
   save (keyword) {
     const item = this.keyword.filter(v => v === keyword);
@@ -34,5 +39,10 @@ class HistoryKeyword {
       wx.setStorageSync(HistoryKeyword.KEY, []);
       return [];
     }
+    return results;
   }
+}
+
+export {
+  HistoryKeyword
 }

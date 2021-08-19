@@ -1,0 +1,77 @@
+/* components/spu-preview-r/index.wxss */
+.container {
+  width: 350rpx;
+  display: flex;
+  flex-direction: column;
+  box-shadow:0px 0px 8px 0px rgba(119,163,149,0.2);
+  margin-bottom:18rpx;
+  background-color: #ffffff;
+}
+
+.content-container {
+  box-sizing: border-box;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 16rpx 16rpx 22rpx 16rpx;
+}
+
+.discount-tag {
+  width: 40rpx;
+  height: 100rpx;
+  position: absolute;
+}
+
+.title {
+  font-size: 28rpx;
+  color: #333333;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  /*margin-bottom: 6rpx;*/
+}
+
+.subtitle {
+  font-size: 24rpx;
+  font-weight: 300;
+  margin-top: 6rpx;
+  height: 60rpx;
+  color: #888;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.price-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.discount-price {
+  margin-left: 20rpx;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 8rpx;
+  margin-top: 6rpx;
+}
+
+.l-tag-class {
+  background-color: #DCEBE6 !important;
+  border-color: #DCEBE6 !important;
+  margin-right: 5rpx !important;
+  color: #157658 !important;
+  padding-left: 6rpx !important;
+  padding-right: 6rpx !important;
+}
+
+
+.img {
+  width: 350rpx;
+  height: 350rpx;
+  display: flex;
+}
