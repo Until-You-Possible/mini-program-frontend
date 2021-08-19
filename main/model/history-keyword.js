@@ -2,27 +2,27 @@
 
 class HistoryKeyword {
   static MAX_ITEM_COUNT = 20;
-  static KEY = "keywords"
-  keyword = [];
+  static KEY = "keywords";
+  keywords = [];
   get () {
-    return this.keyword;
+    return this.keywords;
   }
   constructor () {
-    this.keyword = this._getLocalKeywords();
+    this.keywords = this._getLocalKeywords();
   }
   save (keyword) {
-    const item = this.keyword.filter(v => v === keyword);
-    if (item.length !== 0 ) {
+    const items = this.keywords.filter(v => v === keyword);
+    if (items.length !== 0 ) {
       return;
     }
-    if (item.length >= HistoryKeyword.MAX_ITEM_COUNT) {
-      this.keyword.pop();
+    if (items.length >= HistoryKeyword.MAX_ITEM_COUNT) {
+      this.keywords.pop();
     }
-    this.keyword.unshift(keyword);
+    this.keywords.unshift(keyword);
     this._refreshLocal();
   }
   clear () {
-    this.keyword = [];
+    this.keywords = [];
     this._refreshLocal();
   }
   _refreshLocal () {
@@ -34,5 +34,10 @@ class HistoryKeyword {
       wx.setStorageSync(HistoryKeyword.KEY, []);
       return [];
     }
+    return results;
   }
+}
+
+export {
+  HistoryKeyword  
 }
