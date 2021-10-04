@@ -1,5 +1,4 @@
-/* pages/my/my.wxss */
-
+/* components/my-banner/index.wxss */
 .container{
 }
 

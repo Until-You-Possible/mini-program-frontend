@@ -11,7 +11,7 @@
 </view>
 
 <view class="container">
-    <view wx:if="{{search}}">
+    <view wx:if="{{!search}}">
         <view wx:if="{{historyTags.length !==0 }}" class="history-container">
             <view class="history-title">
                 <view class="slide"></view>
